@@ -4,10 +4,10 @@ using UnityEngine;
 //Jāimportē, lia varētu strādāt ar Event|Systems
 using UnityEngine.EventSystems;
 
-public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler /* IEndDragHandler*/ 
+public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler,  IEndDragHandler
     {
     //Uzglabās norādi uz Objektu skriptu
-   // public Objekti objektuSkripts;
+    public Objekti objektuSkripts;
     //Velkamā objekta piestiprināta komponete
     private CanvasGroup kanvasGrupa;
     //Vilktā objekta atrašanās vietas kooridinātu maiņai
@@ -30,7 +30,7 @@ public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHan
     public void OnBeginDrag(PointerEventData notikums){
         Debug.Log("Uzsākta vilkšana!");
         //Attīra pēdējo vilkto objektu
-        //objektuSkripts.pedejaisVilktais = null;
+        objektuSkripts.pedejaisVilktais = null;
         //Usākot vilkt objektu tas paliek nedaudz caurspīdīgs
         kanvasGrupa.alpha = 0.6f;
         //Lai objekta varētu iet cauri raycast stars
@@ -41,8 +41,35 @@ public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 
     public void OnDrag(PointerEventData notikums)  {
         Debug.Log("notiek vilkšana!");
-        //velkObjRectTransf.anchoredPosition += notikums.delta / objektuSkripts.kanva.scaleFactor;
+        velkObjRectTransf.anchoredPosition += notikums.delta / objektuSkripts.kanva.scaleFactor;
 
+    }
+
+    //Nostādā, kad tiek beigta vilkšana
+    public void OnEndDrag(PointerEventData notikums)
+    {
+        //Atlaižot objektu iestata to kā pēdējo vilkto
+        objektuSkripts.pedejaisVilktais = notikums.pointerDrag;
+        Debug.Log("Pēdējais vilktais objekts: " + objektuSkripts.pedejaisVilktais);
+        Debug.Log("Beigta vilkšana!");
+        //Atlaižot objektu ta atkal paliek necaurspīdīgs
+         kanvasGrupa.alpha = 1;
+
+        //Pārbauda vai objekts ir vienkārši nomest vai arī nomests pareizajā vietā
+        if(objektuSkripts.vaiIstajaVieta == false)
+        {
+        //ja nav nomests pareizaja vietā, tad atkal padara velkamu
+            kanvasGrupa.blocksRaycasts = true;
+        }
+        else
+        {
+        /*Ja objeks nolikts pareizaja vietā, izmēra, rotācija,
+            tad pedējo vilkto attīra*/
+            objektuSkripts.pedejaisVilktais = null;
+        }
+        /*JA viens objekts nomests pareizāja vietā, tad lai verētu turpināt
+        pārvietot pāerējos objektus*/
+        objektuSkripts.vaiIstajaVieta = false;
     }
 
 }
