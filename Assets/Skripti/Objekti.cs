@@ -25,9 +25,10 @@ public class Objekti : MonoBehaviour
     public AudioSource skanasAvots;
     //Masīivs, kas uzglabā visas skaņas
     public AudioClip[] skanaKoAskanot;
+    [HideInInspector]
     //Uzglabā objektu, kurš ir pēdejais vilktais
     public GameObject pedejaisVilktais = null;
-    //MAin;igais atbil par to vai objekts ir nolikts pareizi vai nepareizi
+    //Mainigais atbil par to vai objekts ir nolikts pareizi vai nepareizi
     [HideInInspector]
     public bool vaiIstajaVieta = false;
 
