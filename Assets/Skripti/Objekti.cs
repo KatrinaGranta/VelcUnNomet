@@ -8,6 +8,14 @@ public class Objekti : MonoBehaviour
     public GameObject atkritumuMasina;
     public GameObject atroMasinaa;
     public GameObject autobuss;
+    public GameObject ugunsDz;
+    public GameObject traktors1;
+    public GameObject traktors2;
+    public GameObject policija;
+    public GameObject ekskavators;
+    public GameObject masina1;
+    public GameObject masina2;
+    public GameObject cementaMas;
 
     /*Uzglabā velkamo objektu sākotnējās pozīcijas
     koordinātes (lai zinātu, kur aizmest objektu, AndroidJavaClass tas nolikts nepareizajā vietā)*/
@@ -19,6 +27,22 @@ public class Objekti : MonoBehaviour
     public Vector2 atroKoord;
     [HideInInspector]
     public Vector2 bussKoord;
+    [HideInInspector]
+    public Vector2 ugunsKoord;
+    [HideInInspector]
+    public Vector2 trakKoord;
+    [HideInInspector]
+    public Vector2 trak2Koord;
+    [HideInInspector]
+    public Vector2 poliKoord;
+    [HideInInspector]
+    public Vector2 ekskaKoord;
+    [HideInInspector]
+    public Vector2 mas1Koord;
+    [HideInInspector]
+    public Vector2 cemKoord;
+    [HideInInspector]
+    public Vector2 mas2Koord;
     //uzglabā ainā esošo kanvu
     public Canvas kanva;
     //Uzglab;a skaņas avotu, kurā atskaņot audio failu
@@ -38,5 +62,6 @@ public class Objekti : MonoBehaviour
         atkrKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
         atroKoord = atroMasinaa.GetComponent<RectTransform>().localPosition;
         bussKoord = autobuss.GetComponent<RectTransform>().localPosition;
+        ugunsKoord = ugunsDz.GetComponent<RectTransform>().localPosition;
     }
 }
