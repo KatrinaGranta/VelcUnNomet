@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //jaīmporte lai varetu piesaistit IDropHandler interfeisu un lietot OnDrop funkciju
@@ -64,7 +64,31 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[2]);
                             break;
                         case "Skola":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[4]);
+                            break;
+                        case "Uguns":
                             objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[3]);
+                            break;
+                        case "Traktors":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[5]);
+                            break;
+                        case "Traktors2":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[6]);
+                            break;
+                        case "Policija":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[7]);
+                            break;
+                        case "Ekskavators":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[8]);
+                            break;
+                        case "Masina1":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[9]);
+                            break;
+                        case "cementaMas":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[11]);
+                            break;
+                        case "Masina2":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[10]);
                             break;
 
                         default:
@@ -95,6 +119,38 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                     case "Skola":
                         objektuSkripts.autobuss.GetComponent<RectTransform>().localPosition =
                             objektuSkripts.bussKoord;
+                        break;
+                    case "Uguns":
+                        objektuSkripts.ugunsDz.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.ugunsKoord;
+                        break;
+                    case "Traktors":
+                        objektuSkripts.traktors1.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.trakKoord;
+                        break;
+                    case "Traktors2":
+                        objektuSkripts.traktors2.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.trak2Koord;
+                        break;
+                    case "Policija":
+                        objektuSkripts.policija.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.poliKoord;
+                        break;
+                    case "Ekskavators":
+                        objektuSkripts.ekskavators.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.ekskaKoord;
+                        break;
+                    case "Masina1":
+                        objektuSkripts.masina1.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.mas1Koord;
+                        break;
+                    case "cementaMas":
+                        objektuSkripts.cementaMas.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.cemKoord;
+                        break;
+                    case "Masina2":
+                        objektuSkripts.masina2.GetComponent<RectTransform>().localPosition =
+                            objektuSkripts.mas2Koord;
                         break;
 
                     default:
