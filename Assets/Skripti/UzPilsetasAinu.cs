@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class UzPilsetasAinu : MonoBehaviour
 {
-    //Izdarot klikšķi uz pogas "SacSpelet", tiks atvērta aina "PilsetasAina"
-    public void uzIzvelni()
+    //Izdarot klikšķi uz pogas "Retry", tiks atvērta aina "GalvenaAina"
+    public void uzGalveno()
     {
-        SceneManager.LoadScene("PilsetasAina", LoadSceneMode.Single);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }

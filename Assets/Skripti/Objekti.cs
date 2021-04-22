@@ -16,6 +16,7 @@ public class Objekti : MonoBehaviour
     public GameObject masina1;
     public GameObject masina2;
     public GameObject cementaMas;
+    public GameObject uzvarasLogs;
 
     /*Uzglabā velkamo objektu sākotnējās pozīcijas
     koordinātes (lai zinātu, kur aizmest objektu, AndroidJavaClass tas nolikts nepareizajā vietā)*/

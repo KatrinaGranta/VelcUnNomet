@@ -157,7 +157,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                         Debug.Log("objektam nav noteikta parvietosanas vieta!");
                         break;
                 }
-
+                
             }
         }
     }
