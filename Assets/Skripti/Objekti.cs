@@ -63,5 +63,12 @@ public class Objekti : MonoBehaviour
         atroKoord = atroMasinaa.GetComponent<RectTransform>().localPosition;
         bussKoord = autobuss.GetComponent<RectTransform>().localPosition;
         ugunsKoord = ugunsDz.GetComponent<RectTransform>().localPosition;
+        trakKoord = traktors1.GetComponent<RectTransform>().localPosition;
+        trak2Koord = traktors2.GetComponent<RectTransform>().localPosition;
+        poliKoord = policija.GetComponent<RectTransform>().localPosition;
+        ekskaKoord = ekskavators.GetComponent<RectTransform>().localPosition;
+        mas1Koord = masina1.GetComponent<RectTransform>().localPosition;
+        cemKoord = cementaMas.GetComponent<RectTransform>().localPosition;
+        mas2Koord = masina2.GetComponent<RectTransform>().localPosition;
     }
 }
