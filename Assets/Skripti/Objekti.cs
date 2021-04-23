@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objekti : MonoBehaviour
 {
-    //GameObejct, kas uzglabā visus velkamos objektus
+    //GameObject, kas uzglabā visus velkamos objektus un uzvaras logu
     public GameObject atkritumuMasina;
     public GameObject atroMasinaa;
     public GameObject autobuss;
@@ -22,6 +22,7 @@ public class Objekti : MonoBehaviour
     koordinātes (lai zinātu, kur aizmest objektu, AndroidJavaClass tas nolikts nepareizajā vietā)*/
 
     //Objekts paliek Public, taču paslēpj no inspector Loga
+    //Tiek uzglabāti transportlīdzekļu laukumu koordinātas
     [HideInInspector]
     public Vector2 atkrKoord;
     [HideInInspector]
@@ -46,7 +47,7 @@ public class Objekti : MonoBehaviour
     public Vector2 mas2Koord;
     //uzglabā ainā esošo kanvu
     public Canvas kanva;
-    //Uzglab;a skaņas avotu, kurā atskaņot audio failu
+    //Uzglaba skaņas avotu, kurā atskaņot audio failu
     public AudioSource skanasAvots;
     //Masīivs, kas uzglabā visas skaņas
     public AudioClip[] skanaKoAskanot;

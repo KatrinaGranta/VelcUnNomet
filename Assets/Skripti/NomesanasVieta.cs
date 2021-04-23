@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 
 public class NomesanasVieta : MonoBehaviour, IDropHandler
 {
-    //uzgalaba velkama objekta rotaciju ap z assi un noliekamas vietas rotaciju
-    //starpibu uzgalabas cik liela z ass rotacijas leņķa starpiba starp abiem objektiem
+    //uzglaba velkama objekta rotaciju ap z asi un noliekamas vietas rotaciju
+    //starpibu uzglabās, cik liela z ass rotācijas leņķa starpiba starp abiem objektiem
     private float vietasZrot, velkamaObjeZrot, rotacijasStarpiba;
     //uzglaba velkama objekta un nomesanas vietas izmerus
     private Vector2 vietasIzm, velkObjIzm;
@@ -51,9 +51,11 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                     //pielago nomesta obejkta rotaciju
                     notikums.pointerDrag.GetComponent<RectTransform>().localScale =
                         GetComponent<RectTransform>().localScale;
+
+                    //Atrodot Uzvaras loga atrašanās vietu, tiek skaitīti punkti uz UzvarasLogs
                     GameObject.Find("PointsHandler").GetComponent<UzvarasLogs>().AddPoints();
 
-                    /*parbauda oec tagiem kurs no objektiem ir pareizi nomests, 
+                    /*parbauda pec tagiem kurs no objektiem ir pareizi nomests, 
                     tad atskano atbilsotsu skanu*/
                     switch (notikums.pointerDrag.tag)
                     {
@@ -96,12 +98,12 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                             break;
                     }
                 }
-                //ja objektu tagi nesakrit un nomet nepareizaja vieta
+                //ja objektu tagi nesakrit, nomet nepareizaja vieta
             }
             else
             {
                 objektuSkripts.vaiIstajaVieta = false;
-                //atsakano skanu
+                //atskaņo skanu
                 objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanaKoAskanot[0]);
 
                 //atkariba no objektu taga kurs tika vilkts objekta
