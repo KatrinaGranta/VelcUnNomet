@@ -51,7 +51,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
                     //pielago nomesta obejkta rotaciju
                     notikums.pointerDrag.GetComponent<RectTransform>().localScale =
                         GetComponent<RectTransform>().localScale;
-
+                    GameObject.Find("PointsHandler").GetComponent<UzvarasLogs>().AddPoints();
 
                     /*parbauda oec tagiem kurs no objektiem ir pareizi nomests, 
                     tad atskano atbilsotsu skanu*/
