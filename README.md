@@ -5,4 +5,4 @@
 - [x] Realizēt objektu vilkšanu un moešanu ( uz kartes, nepareizi, pareizi)
 - [x]  Realizēt objektu transformāciju (izmēru maiņa, rotācīja)
 - [x]  Pievienota galvenā aina, atgriešanās poga, pievienotas skaņas
-- [ ]  Uzvaras loga parādīšanās, komenti, projektu pabeigšana
+- [x]  Uzvaras loga parādīšanās, komenti, projektu pabeigšana
